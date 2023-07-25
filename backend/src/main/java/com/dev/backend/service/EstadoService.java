@@ -17,12 +17,12 @@ public class EstadoService {
     @Autowired // substitui a necessidade de usar private EstadoRepository estadoRepository = new Estadorepository();
     private EstadoRepository estadoRepository;
 
-    public List<Estado> buscarTodos(){
+    public List<Estado> buscarTodos() {
         return estadoRepository.findAll();
     }
 
     // se o id estiver null ele entende que deverá criar um novo Estado
-    public Estado inserir(Estado estado){
+    public Estado inserir(Estado estado) {
         estado.setDataCriacao(new Date());
         Estado estadoNovo = estadoRepository.saveAndFlush(estado);
         return estadoNovo;
