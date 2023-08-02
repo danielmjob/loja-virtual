@@ -39,7 +39,7 @@ public class CategoriaService {
 
 
     public void excluir(Long id){
-        Categoria categoria = categoriaRepository.findById(id).get();// o findeById retorna um optional então uso o get para pegar a classe
+        Categoria categoria = categoriaRepository.findById(id).get();// o findById retorna um optional então uso o get para pegar a classe
         categoriaRepository.delete(categoria);
 
         // as exeções serão tratadas depois
